@@ -1,0 +1,6 @@
+{
+  "name": "PySpell: Python Boss Battle Arena",
+  "description": "A level-based combat game where you write real Python syntax to cast explosive spells, speak dialogue, and defeat challenging bosses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
