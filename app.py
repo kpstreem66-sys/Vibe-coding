@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit.components.v1 as components
 
 st.set_page_config(
     page_title="PySpell Game",
@@ -20,9 +19,17 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Public link (does not require 401 login authentication)
-components.iframe(
-    "https://ais-pre-yitkduksphg6bwjai7ixlq-423489132109.us-east5.run.app",
-    height=950,
-    scrolling=True
-)
+# Modern Streamlit iframe
+if hasattr(st, "iframe"):
+    st.iframe(
+        "https://ais-pre-yitkduksphg6bwjai7ixlq-423489132109.us-east5.run.app",
+        height=950,
+        scrolling=True
+    )
+else:
+    import streamlit.components.v1 as components
+    components.iframe(
+        "https://ais-pre-yitkduksphg6bwjai7ixlq-423489132109.us-east5.run.app",
+        height=950,
+        scrolling=True
+    )
